@@ -1,0 +1,72 @@
+import java.awt.*;
+import javax.swing.*;
+
+class reg extends JFrame
+{
+	JPanel upper,lower;
+
+	reg()
+	{
+		setLayout(null);
+		upper=new JPanel();
+		upper.setSize(1080,450);
+		upper.setBackground(new Color(172,13,168));
+		upper.setBounds(0,270,1080,450);
+
+		lower=new JPanel();
+		lower.setLayout(null);
+		lower.setSize(250,600);
+		lower.setBackground(new Color(255,255,255));
+		lower.setBorder(BorderFactory.createLineBorder(new Color(172,13,168),1));
+		lower.setBounds(580,100,250,500);
+
+		JLabel luserid=new JLabel("UserID :");
+		lower.add(luserid);
+		luserid.setBounds(30,80,100,20);
+		
+		JTextField tuserid=new JTextField();
+		lower.add(tuserid);
+		tuserid.setBounds(30,100,200,30);
+	
+		JLabel lpassword=new JLabel("Password :");
+		lower.add(lpassword);
+		lpassword.setBounds(30,180,100,20);
+
+		JPasswordField tpassword=new JPasswordField();
+		lower.add(tpassword);
+		tpassword.setBounds(30,202,200,30);
+
+		JButton login=new JButton("LogIn");
+		lower.add(login);
+		login.setBounds(30,280,100,30);
+		login.setBorderPainted(true);
+		login.setContentAreaFilled(false);
+		login.setBackground(new Color(172,13,168));
+		login.setBorder(BorderFactory.createLineBorder(new Color(172,13,168),1));
+		
+
+		JButton signup=new JButton("SignUP");
+		lower.add(signup);
+		signup.setBounds(135,280,100,30);
+		signup.setBorderPainted(true);
+		signup.setContentAreaFilled(false);
+		signup.setBackground(new Color(238,17,78));
+		signup.setBorder(BorderFactory.createLineBorder(new Color(172,13,168),1));
+				
+
+		add(lower);
+		add(upper);
+	
+		getContentPane().setBackground(new Color(255,255,255));
+
+		setSize(1080,720);
+		setVisible(true);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+	}//reg()
+
+	public static void main(String args[])
+	{
+		new reg();
+	}//main
+}//reg class
+	
